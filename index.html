@@ -1,14 +1,53 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>First Page</title>
+<html lang="zh-CN">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta content="never" name="referrer">
+<title>404</title>
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<style type="text/css">
+  .dalao-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  
+  .dalao-loading,
+  .dalao-loading-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+  }
+
+  .dalao-loading-mask {
+    background-color: #363d4d;
+  }
+
+  .dalao-loading-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  .dalao-loading-text {
+    display: inline-block;
+    color: #e5e2da;
+    font-size:30px;
+    font-weight:bold
+  }
+  </style>
 </head>
 <body>
-    <h2>This is my first page</h2>
-    <script src="main.js"></script>
+  <div class="dalao-loading">
+    <div class="dalao-loading-mask"></div>
+    <div class="dalao-loading-container"><img src="https://jobs.bilibili.com/assets/img/empty_status@2x.e3897f03.png" class="dalao-loading-paimon">
+      <div class="dalao-loading-text"><span>404</span></div>
+    </div>
+</div>
 </body>
 </html>
