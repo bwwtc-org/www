@@ -1,0 +1,1081 @@
+@charset "utf-8";
+/* 滾動條 */
+@media screen and (min-width: 900px){
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    overflow: auto
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #c3c3c3;
+    /*background-color: #e6e6e6;*/
+    min-height: 25px;
+    min-width: 25px;
+    border: 1px solid #e0e0e0;
+    /*border: 1px solid #e0e0e0;*/
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f7f7f7;
+    border: 1px solid #efefef;
+  }
+  }
+
+@media screen and (max-width: 1199.9px){
+  .fixedHeader {
+    position: fixed;
+    z-index: 1300;
+    top: -50px;
+    right: 0;
+    bottom: -50px;
+    left: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 125px 25px;
+    transition: .3s;
+    color: #fff;
+  }
+
+  .navOverlay {
+    position: fixed;
+    z-index: 1200;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-135deg, #ef8637, #e50c20);
+    opacity: .9;
+    transition: .3s;
+    pointer-events: none;
+  }
+
+  .header:not(.is-open){
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .header:not(.is-open) .navOverlay{
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, .1));
+    padding: 5px;
+    background: linear-gradient(90deg, #f4ffff, #fff2ef);
+  }
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  
+
+  .globalNav {
+    display: flex;
+    margin: 0;
+  }
+
+  .socialList {
+    display: flex;
+    margin: 0;
+  }
+}
+
+
+/*
+  logo
+======================== */
+
+.header__logo {
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 30px;
+}
+
+.header__logo>button {
+  font-weight: inherit;
+  color: inherit;
+  transition: .3s color;
+}
+
+.header__logo>button:hover {
+  color: #ea3027;
+  opacity: 1;
+}
+
+@media screen and (min-width: 1200px){
+  .header__logo {
+    margin: 0 auto 0 0;
+    color: #333;
+  }
+}
+
+
+/*
+  nav
+======================== */
+
+.globalNav {
+  font-size: 1.8rem;
+  font-family: Oswald, YakuHanJPs, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1;
+}
+
+.globalNav a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: .8em;
+  transition: .5s;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.globalNav a:hover {
+  opacity: 1;
+  color: #ea3027;
+}
+
+.globalNav a span {
+  position: relative;
+}
+
+.globalNav a[target="_blank"] span::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: -15px;
+  top: .1em;
+  bottom: 0;
+  margin: auto 0;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDguNzAwMiA4LjcwMDIiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZmO308L3N0eWxlPjwvZGVmcz48Zz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik03LjEsNC40YS41LjUsMCwwLDAtLjUuNVY3LjdIMVYySDMuNWEuNS41LDAsMCwwLDAtMUguNWEuNS41LDAsMCwwLS41LjVWOC4yYS41LjUsMCwwLDAsLjUuNUg3LjFhLjUuNSwwLDAsMCwuNS0uNVY0LjlBLjUuNSwwLDAsMCw3LjEsNC40WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTguMiwwSDUuNGEuNS41LDAsMCwwLS4zNTM1Ljg1MzVMNi4wNjA1LDEuODY3MSwzLjQ0MjQsNC41NTA4YS41LjUsMCwxLDAsLjcxNTguNjk4Mkw2Ljc2NzYsMi41NzQzbDEuMDc5MSwxLjA3OUEuNS41LDAsMCwwLDguNywzLjNWLjVBLjUuNSwwLDAsMCw4LjIsMFoiLz48L2c+PC9zdmc+');
+}
+
+@media screen and (min-width: 750px){
+  .globalNav a[target="_blank"] span::after {
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDguNzAwMiA4LjcwMDIiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMzMzO308L3N0eWxlPjwvZGVmcz48Zz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik03LjEsNC40YS41LjUsMCwwLDAtLjUuNVY3LjdIMVYySDMuNWEuNS41LDAsMCwwLDAtMUguNWEuNS41LDAsMCwwLS41LjVWOC4yYS41LjUsMCwwLDAsLjUuNUg3LjFhLjUuNSwwLDAsMCwuNS0uNVY0LjlBLjUuNSwwLDAsMCw3LjEsNC40WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTguMiwwSDUuNGEuNS41LDAsMCwwLS4zNTM1Ljg1MzVMNi4wNjA1LDEuODY3MSwzLjQ0MjQsNC41NTA4YS41LjUsMCwxLDAsLjcxNTguNjk4Mkw2Ljc2NzYsMi41NzQzbDEuMDc5MSwxLjA3OUEuNS41LDAsMCwwLDguNywzLjNWLjVBLjUuNSwwLDAsMCw4LjIsMFoiLz48L2c+PC9zdmc+');
+  }
+}
+
+
+/*
+  sns
+======================== */
+
+.socialList {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.socialList>li>a{
+  padding: 15px;
+  display: block;
+  opacity: 1;
+}
+
+.socialList>li>a:hover>img{
+  transform: scale(1.2, 1.2);
+}
+
+.socialList>li>a>img{
+  width: 50px;
+  transition: .3s;
+}
+
+@media screen and (min-width: 1200px){
+  .socialList>li>a {
+    padding: 5px;
+  }
+  .socialList>li>a>img{
+    width: 40px;
+  }
+}
+
+/*
+  icon
+========================================== */
+
+.menuButton {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1400;
+  background: linear-gradient(-135deg, #ef8637, #e50c20);
+  width: 55px;
+  height: 55px;
+  line-height: 1;
+}
+
+@media screen and (min-width: 1200px){
+  .menuButton {
+    display: none;
+  }
+}
+
+.menuIcon {
+  position: relative;
+  width: 30px;
+  height: 26px;
+  margin: auto;
+}
+
+.menuIcon__line {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  transition: .3s;
+}
+
+.menuIcon__line:nth-child(1) {
+  top: 0;
+}
+
+.menuIcon__line:nth-child(2) {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.menuIcon__line:nth-child(3) {
+  bottom: 0;
+}
+
+.header.is-open .menuIcon__line:nth-child(1) {
+  transform: rotate(45deg);
+  top: calc(50% - 2px);
+}
+
+.header.is-open .menuIcon__line:nth-child(2) {
+  transform:  scale(0);
+}
+
+.header.is-open .menuIcon__line:nth-child(3) {
+  bottom: calc(50% - 2px);
+  transform: rotate(-45deg);
+}
+
+
+/* ==========================================
+*
+*  菜單
+*
+========================================== */
+
+.menuList {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-height: 1;
+  
+}
+
+.menuList__item {
+  width: 50%;
+  position: relative;
+  min-height: 0;
+}
+
+@media screen and (min-width: 900px){
+  .menuList__item {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .menuList {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .menuList__item {
+    flex-grow: 1;
+
+    width: auto;
+    flex-basis: 20%;
+  }
+}
+
+.menuList__item>a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  /* padding-top: calc( 100% * 9 / 16); */
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  opacity: 1;
+}
+
+.menuList__item>a[href="#about"] { background-image: url(../../../../images/main/menu_about.jpg); }
+/* .menuList__item>a[href="#games"] { background-image: url(../../../../images/main/menu_game.jpg); background-position: top;} */
+.menuList__item>a[href="#games"] { background-image: url(../../../../images/main/menu_game.jpg); }
+.menuList__item>a[href="#school"] { background-image: url(../../../../images/main/menu_school.jpg); }
+.menuList__item>a[href="#photo"] { background-image: url(../../../../images/main/bg.jpg); }
+
+.menuList__item>a::before {
+  content: "";
+  display: block;
+  padding-top: calc( 100% * 9 / 16 );
+  background: linear-gradient(-135deg, #7ef3c9 10px, #6bc7e9) no-repeat;
+  opacity: 0;
+  transition: .3s;
+  mix-blend-mode: hard-light;
+}
+
+.menuList__item>a:hover::before {
+  opacity: 1;
+}
+
+
+
+.menuList__text {
+  background: rgba(255, 255, 255, .9);
+  text-align: center;
+  font-weight: 700;
+  padding: .5em;
+  font-size: 1.4rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.menuList__item--countdown {
+  width: 100%;
+  background: url(../../../../images/main/menu_games.jpg) center / cover;
+}
+
+.countDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  font-size: 2.2rem;
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  padding: 20px;
+  font-family: "Noto Serif JP", serif;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px){
+  .countDown {
+    padding: 0 10px;
+    font-size: 3.2rem;
+  }
+}
+
+.countDown__text--count {
+  margin-bottom: .5em;
+}
+
+.countDown__text>b {
+  font-size: 1.5em;
+  font-family: Oswald, sans-serif;
+}
+
+.countDown__text>span {
+  font-size: 3rem;
+  display: block;
+  /* margin: 20px 0 0; */
+  line-height: 1.2;
+}
+
+.countDown__text>span>b {
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 1200px){
+  .countDown__text {
+    margin-bottom: .5em;
+  }
+  
+  .countDown__text>span {
+    font-size: 4rem;
+  }
+}
+
+.countDown[data-state="coutdown"] .countDown__text:not(.countDown__text--count){
+  display: none;
+}
+
+.countDown[data-state="opening"] .countDown__text:not(.countDown__text--opening){
+  display: none;
+}
+
+.countDown[data-state="during"] .countDown__text:not(.countDown__text--during){
+  display: none;
+}
+
+/* ==========================================
+*
+*  大覇星祭とは
+*
+========================================== */
+
+.aboutHead {
+  font-family: "Noto Serif JP", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1.2;
+  margin: 0 0 1em;
+}
+
+@media screen and (min-width: 900px){
+  .aboutHead {
+    font-size: 6rem;
+  }
+}
+
+.aboutText {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+
+body[data-browser="IE"] .aboutText,
+body[data-browser="Edge"] .aboutText {
+  white-space: normal;
+}
+
+@media screen and (min-width: 900px){
+  .aboutText {
+    font-size: 1.8rem;
+  }
+}
+
+.aboutText__large {
+  font-size: 1.6em;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.aboutImg {
+  margin: 30px auto 0;
+}
+
+
+@media screen and (min-width: 900px){
+  .aboutImg {
+    margin-top: 60px;
+  }
+}
+
+/* ==========================================
+*
+*  競技一覧
+*
+========================================== */
+
+.gamesList__item {
+  margin: 0 0 40px;
+}
+
+@media screen and (min-width: 600px){
+  .gamesList__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    
+  }
+
+  .gameHead {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .gameImg {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    width: 30vw;
+    max-width: 250px;
+    margin-top: 10px;
+  }
+
+  .gameDesc{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 0 1em 0 0;
+  }
+}
+
+.gameHead {
+  line-height: 1.2;
+  padding-bottom: .5em;
+  border-bottom: 5px solid #e8e8e8;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 900px){
+  .gameHead {
+    font-size: 3rem;
+  }
+}
+
+.gameHead__text {
+  letter-spacing: .1em;
+  font-weight: 900;
+}
+
+.gameHead__pictogram {
+  width: 50px;
+  height: 50px;
+  margin: 0 15px 0 0;
+  display: block;
+  border-radius: 50%;
+  background: linear-gradient(-135deg, #ef8637, #e50c20);
+  position: relative;
+}
+
+.gameHead__pictogram::before {
+  content: "";
+  position: absolute;
+  color: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: 102% 102%;
+  background-repeat: no-repeat;
+}
+
+.gamesList__item:nth-child(1) .gameHead__pictogram::before {
+  /* background-image: url(../../../../images/main/pict_boutaoshi.svg); */
+  background-image: url(../../../../svg/田径.svg);
+}
+
+.gamesList__item:nth-child(2) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_karimono.svg);
+}
+
+.gamesList__item:nth-child(3) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_oodama.svg);
+}
+
+.gamesList__item:nth-child(4) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_tamaire.svg);
+}
+
+.gamesList__item:nth-child(5) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_parade.svg);
+}
+
+.gamesList__item:nth-child(6) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_dance.svg);
+}
+
+.gamesList__item:nth-child(7) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_ninin.svg);
+}
+
+.gamesList__item:nth-child(8) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_balloon.svg);
+}
+
+.gamesList__item:nth-child(9) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_hunter.svg);
+}
+
+.gamesList__item:nth-child(10) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_pankui.svg);
+}
+
+.gamesList__item:nth-child(11) .gameHead__pictogram::before {
+  background-image: url(../../../../images/main/pict_bouhiki.svg);
+}
+
+@media screen and (max-width: 599.9px){
+  .gameImg {
+    text-align: center;
+    background: #e8e8e8;
+    margin: 0 0 6px;
+  }
+
+  .gameImg>img{
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .gameDesc__text {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==========================================
+*
+*  出場校一覧
+*
+========================================== */
+
+.schoolList__item {
+  padding: 30px;
+  margin: 0 0 50px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+@media screen and (min-width: 600px){
+  .schoolList__item {
+    padding: 50px;
+  }
+}
+
+.schoolName {
+  font-size: 2.8rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+  letter-spacing: .15em;
+  line-height: 1.2;
+  padding-bottom: .5em;
+  border-bottom: 5px solid #e8e8e8;
+  margin: 0 0 .5em;
+}
+
+@media screen and (min-width: 600px){
+  .schoolName {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (min-width: 600px){
+  .schoolDesc {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+.schoolSubHead {
+  font-size: 1.6rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+  margin: 2em 0 .5em;
+}
+
+@media screen and (min-width: 600px){
+  .schoolSubHead {
+    font-size: 2rem;
+  }
+}
+
+.charaList {
+  margin: 0;
+}
+
+.charaList__item {
+  margin: 0 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 600px){
+  .charaList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+  }
+
+  .charaList__item {
+    width: calc( 50% - 10px);
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .charaList__item {
+    width: calc( 25% - 10px);
+  }
+}
+
+.charaList__item>a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1em;
+  background: linear-gradient(-90deg, #f1f1f1, #f1f1f1 30%, #7ef3c9 60%, #6bc7e9) center right / 300% 100%;
+  opacity: 1;
+  transition: .5s;
+}
+
+.charaList__item>a:hover {
+  background-position: left;
+}
+
+.charaImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.charaImg>img {
+  width: auto;
+  max-width: none;
+  height: 100%;
+  transition: .3s;
+}
+
+.charaList__item>a:hover img {
+  transform: translateX(-1%);
+}
+
+.charaName {
+  position: relative;
+  text-align: right;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-shadow: 
+    #fff 2px 0px 2px, #fff -2px 0px 2px,
+    #fff 0px -2px 2px, #fff -2px 0px 2px,
+    #fff 2px 2px 2px, #fff -2px 2px 2px,
+    #fff 2px -2px 2px, #fff -2px -2px 2px,
+    #fff 1px 2px 2px, #fff -1px 2px 2px,
+    #fff 1px -2px 2px, #fff -1px -2px 2px,
+    #fff 2px 1px 2px, #fff -2px 1px 2px,
+    #fff 2px -1px 2px, #fff -2px -1px 2px,
+    #fff 1px 1px 2px, #fff -1px 1px 2px,
+    #fff 1px -1px 2px, #fff -1px -1px 2px;
+}
+
+.otherSchoolList {
+  font-size: 2.6rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+  letter-spacing: .15em;
+  line-height: 1.2;
+  margin: 0;
+  list-style: disc;
+  padding-left: 1em;
+}
+
+.otherSchoolList>li {
+  margin: 0 0 .5em;
+}
+
+@media screen and (min-width: 600px){
+  .otherSchoolList {
+    font-size: 3.2rem;
+  }
+}
+
+.otherSchoolText {
+  /* font-size: 2.8rem; */
+  /* font-family: "Noto Serif JP", serif; */
+  /* font-weight: 900; */
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 600px){
+  .otherSchoolText {
+    font-size: 1.6rem;
+  }
+}
+
+/* ==========================================
+*
+*  昨年度優勝校
+*
+========================================== */
+
+.winnerHead {
+  margin: 0 0 1em;
+  color: #DCC35E;
+  text-align: center;
+  font-size: 2rem; 
+}
+
+@media screen and (min-width: 600px){
+  .winnerHead {
+    font-size: 3rem;
+  }
+}
+
+.winnerHead>span:nth-child(1) {
+  display: inline-block;
+  background: #DCC35E;
+  color: #383260;
+  font-size: .7em;
+  padding: 0 .5em;
+  margin: 0 1em 0 0;
+}
+
+.winnerHead>span:nth-child(2) {
+  display: inline-block;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: .5em;
+  font-size: .9em;
+}
+
+.winnerHead>b {
+  display: inline-block;
+  margin: .2em 0 3px;
+  font-family: "Noto Serif JP", serif;
+  text-shadow: 5px 5px 12px rgba(0, 0, 0, .3);
+  letter-spacing: .5em;
+  margin-right: -.5em;
+  font-size: 1.5em;
+  color: #fff;
+  padding-bottom: .8em;
+  position: relative;
+}
+
+.winnerHead>b::before,
+.winnerHead>b::after {
+  content: "";
+  position: absolute;
+  right: .5em;
+  left: 0;
+  background: #DCC35E;
+}
+
+.winnerHead>b::before {
+  height: 3px;
+  bottom: 4px;
+}
+
+.winnerHead>b::after {
+  height: 1px;
+  bottom: 0;
+}
+
+.winnerDesc {
+  font-family: "Noto Serif JP", serif;
+  text-align: center;
+  text-shadow: 5px 5px 12px rgba(0, 0, 0, .3);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 600px){
+  .winnerDesc {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 3000px){
+  .winnerDesc {
+    max-width: none;
+  }
+}
+
+/* ==========================================
+*
+*  観戦する
+*
+========================================== */
+
+.photoText {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.photoText>b{
+  font-size: 1.4em;
+  margin-top: .5em;
+  display: block;
+}
+
+@media screen and (min-width: 900px){
+  .photoText {
+    font-size: 2rem;
+  }
+}
+
+.photoList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 50px;
+}
+
+.photoList>li {
+  width: 33%;
+  flex-grow: 1;
+  background: white;
+  margin: 1px;
+}
+
+.photoList a {
+  display: block;
+  padding: 20px;
+}
+
+/* ==========================================
+*
+*  link button
+*
+========================================== */
+
+.linkButton {
+  text-align: center;
+  margin: 0;
+}
+
+.linkButton>button,
+.linkButton>a {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1;
+  opacity: 1;
+  font-family: YakuHanJPs, 'Oswald', "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  background: linear-gradient(90deg, rgba(107, 199, 233, .3), rgba(126, 243, 201, .3) 34%, #7ef3c9 60%, #6bc7e9) center right / 300% 100% no-repeat;
+  color: #333;
+  font-size: 1.6rem;
+  padding: 1em 2em;
+  transition: .5s;
+  border: 1px solid rgba(107, 199, 233, 0);
+  position: relative;
+}
+
+.linkButton--small>button,
+.linkButton--small>a {
+  padding: .8em 1em;
+  font-size: 1.4rem;
+}
+
+.linkButton>a[target="_blank"] {
+  padding-right: 2.5em;
+}
+
+.linkButton--small>a[target="_blank"] {
+  padding-right: 1.5em;
+}
+
+.linkButton>button:hover,
+.linkButton>a:hover {
+  background-position: left;
+  opacity: 1; 
+  border-color: #6bc7e9;
+}
+
+.linkButton>a[target="_blank"]::after {
+  content: "";
+  width: .5em;
+  height: .5em;
+  position: absolute;
+  right: 1.5em;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgdmlld0JveD0iMCAwIDguNzAwMiA4LjcwMDIiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMzMzO308L3N0eWxlPjwvZGVmcz48Zz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik03LjEsNC40YS41LjUsMCwwLDAtLjUuNVY3LjdIMVYySDMuNWEuNS41LDAsMCwwLDAtMUguNWEuNS41LDAsMCwwLS41LjVWOC4yYS41LjUsMCwwLDAsLjUuNUg3LjFhLjUuNSwwLDAsMCwuNS0uNVY0LjlBLjUuNSwwLDAsMCw3LjEsNC40WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTguMiwwSDUuNGEuNS41LDAsMCwwLS4zNTM1Ljg1MzVMNi4wNjA1LDEuODY3MSwzLjQ0MjQsNC41NTA4YS41LjUsMCwxLDAsLjcxNTguNjk4Mkw2Ljc2NzYsMi41NzQzbDEuMDc5MSwxLjA3OUEuNS41LDAsMCwwLDguNywzLjNWLjVBLjUuNSwwLDAsMCw4LjIsMFoiLz48L2c+PC9zdmc+') center/contain no-repeat;
+}
+
+.linkButton--small>a[target="_blank"]::after {
+  right: .5em;
+}
+
+/* ==========================================
+*
+*  フッター
+*
+========================================== */
+
+.footerHead {
+  font-weight: 100;
+  position: relative;
+  margin: 0 0 .2em;
+  padding: 0 0 .4em;
+  font-size: 2rem;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+@media screen and (min-width: 600px){
+  .footerHead {
+    font-size: 2.6rem;
+  }
+}
+
+.footerHead::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(to right, #fff 50%, #fff0);
+  width: 100%;
+  max-width: 600px;
+}
+
+.footerNavWrap ul {
+  display: flex;
+  font-weight: 600;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+  flex-wrap: wrap;
+}
+
+.footerNav>li {
+  
+}
+
+.footerNavWrap a {
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  position: relative;
+  opacity: 1;
+}
+
+.footerNavWrap a::after {
+  content: "";
+  position: absolute;
+  right: .5em;
+  bottom: .2em;
+  left: .5em;
+  background: #fff;
+  height: 2px;
+  opacity: 0;
+  transition: .3s;
+}
+
+.footerNavWrap a:hover::after {
+  opacity: 1;
+}
+
+.copyright {
+  margin: 50px 0 0;
+  font-size: 1rem;
+  text-align: center;
+  font-family: YakuHanJPs, "Noto Sans JP", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+@media screen and (min-width: 600px){
+  .copyright {
+    text-align: left;
+  }
+}

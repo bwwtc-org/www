@@ -1,53 +1,616 @@
 
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<meta content="never" name="referrer">
-<title>404</title>
-<meta name="robots" content="INDEX,FOLLOW" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-<style type="text/css">
-  .dalao-loading {
-    display: flex;
-    justify-content: center;
-    align-items: center
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no">
+<title>佛教黃允畋中學 運動會</title>
+<meta name="description" content="一年一度的運動會即將開啟，2022年度的運動會將於12月19日（星期一）及12月20日（星期二）舉辦。">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900|Noto+Serif+JP:700,900|Oswald:400,500|Lato:400,900&amp;subset=japanese" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp_s.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanmp_s.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css" rel="stylesheet">
+<link href="images/others/css/magnific-popup-edited.css" rel="stylesheet">
+<link href="css/common/common.css" rel="stylesheet">
+<link href="css/user/user.css" rel="stylesheet">
+<link href="css/dez_pt/contents/006/base_area.css" rel="stylesheet">
+<link href="css/dez_pt/contents/006/sub_area.css" rel="stylesheet">
+<link href="images/others/css/utility.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+<script src="images/others/js/mav.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+</head>
+
+<button class="menuButton">
+  <div class="menuIcon">
+    <span class="menuIcon__line"></span>
+    <span class="menuIcon__line"></span>
+    <span class="menuIcon__line"></span>
+  </div>
+</button>
+
+
+<header class="header">
+<div class="navOverlay"></div>
+  <div class="fixedHeader">
+  <div class="header__inner">
+
+    <h1 class="header__logo">
+      <button class="js-scrollToTop">佛教黃允畋中學 運動會</button>
+    </h1>
+
+    <nav class="header__nav">
+      <ul class="globalNav">
+        <li class="globalNav__item"><a href="#about">關於運動會</a></li>
+        <li class="globalNav__item"><a href="#games">競賽項目</a></li>
+        <li class="globalNav__item"><a href="#school">競賽流程</a></li>
+        <li class="globalNav__item"><a href="#photo">相關圖片</a></li>
+      </ul>
+    </nav>
+
+    <!-- <div class="header__share">
+      <ul class="socialList">
+        <li class="socialList__item socialList__item--twitter"><a class="js-share--twitter" href="https://twitter.com/intent/tweet?text=" rel="nofollow" target="_blank" title="Twitter"><img src="images/main/common/share_twitter.svg" alt="Twitter"></a></li>
+        <li class="socialList__item socialList__item--facebook"><a class="js-share--facebook" href="http://www.facebook.com/sharer.php?u=" target="_blank" title="Facebook"><img src="images/main/common/share_facebook.svg" alt="Facebook"></a></li>
+        <li class="socialList__item socialList__item--line"><a class="js-share--line" href="http://line.me/R/msg/text/" target="_blank" title="LINE"><img src="images/main/common/share_line.svg" alt="LINE"></a></li>
+      </ul>
+    </div> -->
+    
+  </div>
+</div>
+</header>
+
+
+<main class="wrapper">
+  <div class="wrapper__inner">
+
+    <section class="topSection">
+      <div class="topSection__inner">
+
+        <div class="kvArea">
+          <div class="kvArea__img">
+            <!-- <img src="images/main/main_img.jpg"> -->
+            <!-- <img src="overview.jpg"> -->
+            <a href="https://bwwtc.edu.hk/bwwtc/wp-content/uploads/2022/11/%E5%AD%B8%E6%A0%A1%E6%A6%82%E8%A6%BD.pdf" target="_blank" rel="noopener noreferrer"><img src="overview.jpg"></a>
+          </div>
+
+          <!-- <div class="kvArea__catch">
+            <img src="main/main_catch.jpg">
+          </div> -->
+
+        </div>
+
+        <!--
+        ========================================= -->
+        <div class="menuArea">
+          <ul class="menuList">
+            <li class="menuList__item">
+              <a href="#about">
+                <div class="menuList__text">關於運動會</div>
+              </a>
+            </li>
+
+            <li class="menuList__item">
+              <a href="#games">
+                <div class="menuList__text">競賽項目</div>
+              </a>
+            </li>
+
+            <li class="menuList__item">
+              <a href="#school">
+                <div class="menuList__text">競賽流程</div>
+              </a>
+            </li>
+
+            <li class="menuList__item">
+              <a href="#photo">
+                <div class="menuList__text">相關圖片</div>
+              </a>
+            </li>
+
+            <li class="menuList__item menuList__item--countdown">
+              <div class="countDown">
+                <div class="countDown__text countDown__text--count">
+                  距離運動會還有<b class="js-countDays"></b>日<br>
+                </div>
+                <div class="countDown__text countDown__text--opening">
+                  <span>運動會正在進行中</span>
+                </div>
+                <div class="countDown__text countDown__text--during">
+                  <span class="c-inlineBlockWrap"><span>本年度的</span><span>運動會</span><span>已經結束</span></span>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- ========================================
+    about
+    ========================================= -->
+    <section class="contSection" id="about">
+      <div class="contSection__inner">
+        <h2 class="aboutHead js-parallax">運動會說明</h2>
+        <p class="aboutText js-parallax">本校將於12月19日<wbr>（星期一）<wbr>及12月20日<wbr>（星期二）<wbr>舉辦運動會，<wbr>學生已於11月21日<wbr>（星期一）<wbr>至11月25日<wbr>（星期五）<wbr>於校網完成報名手續，<wbr>家長將於稍後收到確認<wbr>學生參賽項目之通告。<wbr>
+          因應疫情，<wbr>參加比賽學生<wbr>需符合教育局最新<wbr>「預防2019冠狀病毒病<wbr>學校健康指引」<wbr>的要求<wbr>和已完成接種<wbr>三劑疫苗，<wbr>並符合進入康文署<wbr>場地的「疫苗通行證」要求，<wbr>安心出行應用程式<wbr>必須顯示藍碼。<wbr>其他非參加<wbr>比賽的學生，<wbr>包括服務生、<wbr>制服團隊、<wbr>電視台服務生、<wbr>為免接種疫苗者，<wbr>如要進入連動場，<wbr>均需符合進入康文署<wbr>場地的「疫苗通行證」要求，<wbr>安心出行應用程式<wbr>必須顯示藍碼。<wbr>
+          未符合上述要求的<wbr>學生，則以全日上課<wbr>時間表回校溫習。<wbr>
+          校方將依照當時的<wbr>教育局及康文署場地<wbr>指引安排有關活動，<wbr>不論在看台<wbr>還是在場區，<wbr>學生仍需保持<wbr>適當的社交距離，<wbr>只有比賽期間<wbr>方可除口罩。<wbr>
+          另12月21日<wbr>（星期三）<wbr>為運動會補假，<wbr>學生毋須回校上課。</p>
+
+        <p class="aboutImg js-parallax">
+          <picture>
+            <source media="(max-width: 899px)" srcset="images/main/about_sp.png">
+            <img src="images/main/about_pc.png" alt="全力以赴，奪得成績！">
+          </picture>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================
+    games
+    ========================================= -->
+    <section class="contSection" id="games">
+      <h2 class="contHead js-parallax">比賽項目</h2>
+      <div class="contSection__inner">
+
+        <div class="contBlock">
+          
+          <ul class="gamesList">
+            
+            <li class="gamesList__item js-parallax">
+                <h3 class="gameHead">
+                  <span class="gameHead__pictogram"></span>
+                  <span class="gameHead__text">100米賽跑</span>
+                </h3>
+                <div class="gameImg">
+                  <img src="images/sc/20191219_4-1024x682.jpg">
+                </div>
+                <div class="gameDesc">
+                  <p class="gameDesc__text">100米是屬於田徑短跑項目。夏季奧林匹克運動會和世界田徑錦標賽100米冠軍，通常被稱為「世界上最快的人」，大部分短跑選手100米平均速率比200米更快一些。</p>
+                </div>
+              </li>
+
+            <li class="gamesList__item js-parallax js-parallax">
+              <h3 class="gameHead">
+                <span class="gameHead__pictogram"></span>
+                <span class="gameHead__text">班際接力賽跑</span>
+              </h3>
+              <div class="gameImg">
+                <img src="images/sc/20191219_17-1024x682.jpg">
+              </div>
+              <div class="gameDesc">
+                <p class="gameDesc__text">接力賽跑屬於田徑運動的一類，為多人合作的徑賽項目。同隊選手之間以30厘米長的金屬圓棒為傳接工具，必須在接棒區內接棒。當拿着棒的跑手快接近時，即將接棒的跑手便已開始起跑，以便達到最高速度時接棒。因此，接力賽跑的成績除以選手人數通常比獨立項目的成績為快。</p>
+              </div>
+            </li>
+            
+          </ul>
+
+        </div>
+        
+      </div>
+    </section>
+
+
+    <section class="contSection" id="school">
+      <h2 class="contHead js-parallax">競賽項目</h2>
+      <div class="contSection__inner">
+        <h3 class="contSubHead js-parallax"><span>第一日</span></h3>
+
+        <div class="contBlock">
+
+          <ul class="schoolList">
+
+            <li class="schoolList__item js-parallax">
+              <h4 class="schoolName">上午（9:00-12:00）</h4>
+
+              <p class="schoolDesc">賽事簡介</p>
+              <h5 class="schoolSubHead">賽事內容</h5>
+
+              <ul class="charaList">
+                <li class="charaList__item">
+                  <a href="" target="_blank">
+                    <div class="charaImg"><img src="images/main/"></div>
+                    <div class="charaName">項目名稱</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="schoolList__item js-parallax">
+              <h4 class="schoolName">??????</h4>
+
+              <p class="schoolDesc">●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●</p>
+
+              <h5 class="schoolSubHead">賽事內容</h5>
+              <ul class="charaList">
+                <li class="charaList__item">
+                  <a href="" target="_blank">
+                    <div class="charaImg"><img src="images/main/"></div>
+                    <div class="charaName">項目名稱</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+
+        <h3 class="contSubHead js-parallax"><span>額外的</span></h3>
+        <div class="contBlock">
+          <ul class="otherSchoolList js-parallax">
+            <li>測試內容</li>
+          </ul>
+          <p class="otherSchoolText">一段文字</p>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="contSection" id="winner">
+      <div class="contSection__inner">
+        <h2 class="winnerHead js-parallax">
+          <span>PICK UP</span>
+          <span>2019年優勝班級</span><br>
+          <b>1A</b>
+        </h2>
+        <p class="winnerDesc js-parallax">xxx年度舉辦的班級得分活動，由1A奪得第一名，共有443分。</p>
+      </div>
+    </section>
+
+    <section class="contSection" id="photo">
+      <div class="contSection__inner">
+        <h3 class="contSubHead js-parallax"><span>相關圖片</span></h3>
+
+        <div class="contBlock">
+          
+          <p class="photoText js-parallax">第36屆陸運會相關照片<br><b>「全力以赴 勇奪佳績」</b></p>
+          <ul class="photoList js-parallax">
+            <li><a><img src="images/sc/20191219_0-1024x682.jpg" alt=" "></a></li>
+            <li><a><img src="images/sc/20191219_1-1024x682.jpg" alt=""></a></li>
+            <li><a><img src="images/sc/20191219_2-1024x682.jpg" alt=" "></a></li>
+            <li><a><img src="images/sc/20191219_3-1024x682.jpg" alt=""></a></li>
+            <li><a><img src="images/sc/20191219_4-1024x682.jpg" alt=" "></a></li>
+            <li><a><img src="images/sc/20191219_5-1024x682.jpg" alt=""></a></li>
+            <!-- <li><a href="" target="_blank" rel="noopener noreferrer"><img src=" " alt="其他"></a></li> -->
+          </ul>
+          <p class="linkButton js-parallax"><a href="https://bwwtc.edu.hk/bwwtc/2019/12/19/%e7%ac%ac36%e5%b1%86%e9%99%b8%e9%81%8b%e6%9c%83/" target="_blank" rel="noopener noreferrer">更多照片</a></p>
+
+        </div>
+        
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <h3 class="footerHead">運動會</h3>
+    <div class="footerNavWrap">
+      <ul class="footerNav">
+        <li class="footerNav__item"><a href="#about">關於運動會</a></li>
+        <li class="footerNav__item"><a href="#games">競賽項目</a></li>
+        <li class="footerNav__item"><a href="#school">競賽流程</a></li>
+        <li class="footerNav__item"><a href="#photo">相關圖片</a></li>
+      </ul>
+    </div>
+
+    <h3 class="footerHead">佛教黃允畋中學 相關網站</h3>
+    <div class="footerNavWrap">
+	<div id="site_map">
+
+	<ul class="main">
+	<li class="home"><a href="https://bwwtc.edu.hk/bwwtc/" target="_blank" rel="noopener noreferrer" title="On Air"><span class="sm_sysno2">學校官網</span></a></li>
+	<li class="home"><a href="https://eclass.bwwtc.edu.hk/templates/" target="_blank" rel="noopener noreferrer" title="On Air"><span class="sm_sysno3">EClass</span></a></li>
+	</ul>
+
+	<ul class="sub">
+	</ul>
+
+	</div>
+    </div>
+<script>
+$(function(){
+  $("#site_map").find("a").attr("target", "_blank");
+});
+</script>
+
+    <p class="copyright">佛教黃允畋中學／©2022 BWWTC-ORG版權所有.</p>
+  </div>
+</footer>
+
+
+
+<script>
+
+MAVJS.addUserAgent();
+
+$(function(){
+
+  // 刪除相對链接中的index.html
+  MAVJS.removeIndexHtml();
+
+  // rel="noopener noreferrer"
+  MAVJS.addRelNoopener();
+
+  // 標記定位列表
+  MAVJS.customMarkerList();
+
+  // 滾動(offsetY, time, easing);
+  MAVJS.smoothScroll( -50, 1000, "easeInOutQuint" );
+
+  
+});
+
+/* ==========================================
+* 2022/12/14 - 22:54
+========================================== */
+(function(){
+
+  GNAV_SCREENTYPE = null;
+  GNAV_STATE = "close";
+
+  var $menubutton = $(".menuButton"), // 菜單按鈕
+    $gNavUnit = $(".header"), // class需要替換的元素
+    $gNavLink = $(".globalNav").find("a"), // 超鏈接
+    switchSize = 900, // SP / PC開關尺寸
+    locationHref = location.href, // 當前網址
+    urlHash = location.hash, // 當前網址的哈希值
+    scrollTime = 1000, // 滾動定位時間
+    scrollEasing = "swing", // 滾動模式
+    scrollOffsetYWide = -50, // PC屏幕的滾動偏差值(px)
+    scrollOffsetYNarrow = -100; // SP屏幕的滾動偏差值(px)
+
+  // 滾動定位
+  function scrollToAnker(hash) {
+    var target = $(hash),
+      position = target.offset().top,
+      offset = scrollOffsetYNarrow;
+    if (GNAV_SCREENTYPE === "wide") {
+      var offset = scrollOffsetYWide;
+    }
+    $("html,body").stop().animate({scrollTop: position + offset }, scrollTime, scrollEasing);
+  }
+
+  // Open
+  function openNav() {
+    GNAV_STATE = "open";
+    $gNavUnit.addClass("is-open");
+  }
+
+  // Close
+  function closeNav() {
+    GNAV_STATE = "close";
+    $gNavUnit.removeClass("is-open");
+  }
+
+  // URL哈希判斷
+  if(urlHash) {
+    if ($(urlHash).length) {
+      $(function() {
+        $("html,body").stop().animate({ scrollTop: 0 }, 0);
+      });
+      $(window).on("load", function(){
+        setTimeout(function() {
+          scrollToAnker(urlHash);
+        }, 10);
+      });
+    }
+  }
+
+
+  // 屏幕尺寸檢查
+  $(window).on("load resize", function() {
+    var wW = $(window).innerWidth;
+    if (wW > switchSize) {
+      if (GNAV_SCREENTYPE === "wide") { return; }
+      GNAV_SCREENTYPE = "wide";
+      openNav();
+    } else {
+      if (GNAV_SCREENTYPE === "narrow") { return; }
+      GNAV_SCREENTYPE = "narrow";
+      closeNav();
+    }
+  });
+
+  $menubutton.on("click", function() {
+    if (GNAV_STATE === "close") {
+      openNav();
+      return false;
+    } else {
+      closeNav();
+      return false;
+    }
+  });
+
+
+  $gNavLink.on("click", function(){
+    var thisHash = this.hash,
+      $target = $(thisHash),
+      thisFilename = locationHref.replace(/#.*$/,""),
+      targetHref = $(this).get(0).href.replace(/#.*$/,"");
+    if ($(this).attr("target")) { return; }
+    if (!$target.length) { return; };
+    if (targetHref.indexOf(thisFilename) < 0){ return; }
+    if (GNAV_SCREENTYPE === "narrow") { closeNav(); }
+/*
+    scrollToAnker(thisHash);
+    window.history.pushState(null, null, thisHash);
+    return false;
+*/
+  });
+
+  $(".js-scrollToTop").on("click", function(){
+    if (GNAV_SCREENTYPE === "narrow") { closeNav(); }
+  });
+
+})();
+
+/* ==========================================
+*
+* 
+*
+========================================== */
+
+$(function() {
+  MAVJS.addClassWhenVisible(".js-parallax", "is-visibled", 50, false);
+});
+
+/* ==========================================
+*
+* 活動倒數
+*
+========================================== */
+
+$(function() {
+  /* ===== 設定時間 ===== */
+  /*
+  const target = {
+    "yyyy": 2020, // 年
+    "MM": 1,      // 月
+    "dd": 17,     // 日
+    "HH": 0,     // 時
+    "mm": 0,      // 分
+    "ss": 0,      // 秒
+  }
+  */
+
+  const timerArray = {
+    // 運動會進行中 倒計時
+    opening : {
+      "yyyy": 2022, // 年
+      "MM": 12,      // 月
+      "dd": 19,     // 日
+      "HH": 0,      // 時
+      "mm": 0,      // 分
+      "ss": 0,      // 秒
+    },
+    // 運動會結束 倒計時
+    during: {
+      "yyyy": 2022, // 年
+      "MM": 12,      // 月
+      "dd": 20,     // 日
+      "HH": 17,      // 時
+      "mm": 00,      // 分
+      "ss": 0,      // 秒
+    },
+
   }
   
-  .dalao-loading,
-  .dalao-loading-mask {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%
+
+  /* ===== var ===== */
+  const $countDays = $(".js-countDays");
+  const $countHours = $(".js-countHours");
+  const $countMinites = $(".js-countMinites");
+  const $countSeconds = $(".js-countSeconds");
+
+  /*
+     
+  ======================== */
+  function returnDiffTime(target) {
+    const today = new Date();
+    const targetDay = new Date(target["yyyy"], target["MM"]-1, target["dd"], target["HH"], target["mm"], target["ss"]);
+    let diffTime = {
+      "dd": 0,
+      "HH": 0,
+      "mm": 0,
+      "ss": 0
+    };
+    //毫秒
+    let diff = targetDay - today; 
+
+  　// 如果設定的時間已經超過，則返回0
+    if( today > targetDay) {
+      return diffTime;
+    }
+
+    // 日
+    diffTime.dd = Math.floor(diff / ( 1000 * 60 * 60 * 24 ));
+    diff        = diff % ( 1000 * 60 * 60 * 24 );
+    // 時
+    diffTime.HH = Math.floor(diff / ( 1000 * 60 * 60 ));
+    diff        = diff % ( 1000 * 60 * 60 );
+    // 分
+    diffTime.mm = Math.floor(diff / ( 1000 * 60 ));
+    diff        = diff % ( 1000 * 60 );
+    // 秒
+    diffTime.ss = Math.floor(diff / 1000);
+
+    return diffTime;
   }
 
-  .dalao-loading-mask {
-    background-color: #363d4d;
+  /*
+     
+  ======================== */
+  function changeCount(diffTime){
+    $countDays.text(diffTime["dd"]+1);
+/*
+    $countHours.text(diffTime["HH"]);
+    $countMinites.text(diffTime["mm"]);
+    $countSeconds.text(diffTime["ss"]);
+*/
   }
 
-  .dalao-loading-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center
+  $(".countDown").attr("data-state", "coutdown");
+
+  var duringDiffTime = returnDiffTime(timerArray["during"]);
+  
+  if( duringDiffTime["dd"] === 0 && duringDiffTime["HH"] === 0 && duringDiffTime["mm"] === 0 && duringDiffTime["ss"] === 0 ){　
+    $(".countDown").attr("data-state", "during");
+    return;
   }
 
-  .dalao-loading-text {
-    display: inline-block;
-    color: #e5e2da;
-    font-size:30px;
-    font-weight:bold
-  }
-  </style>
-</head>
-<body>
-  <div class="dalao-loading">
-    <div class="dalao-loading-mask"></div>
-    <div class="dalao-loading-container"><img src="https://jobs.bilibili.com/assets/img/empty_status@2x.e3897f03.png" class="dalao-loading-paimon">
-      <div class="dalao-loading-text"><span>404</span></div>
+//  var countDown = setInterval(function(){
+    var diffTime = returnDiffTime(timerArray["opening"]);
+    changeCount(diffTime);
+    if( diffTime["dd"] === 0 
+     && diffTime["HH"] === 0
+     && diffTime["mm"] === 0
+     && diffTime["ss"] === 0
+    ){　
+//      clearInterval(countDown);
+      $(".js-countEnd").css("display", "block");
+      $(".countDown__text").eq(0).css("display", "none");
+      $(".countDown").attr("data-state", "opening");
+    }
+//  }, 1000 );
+
+});
+</script>
+
+<div class="loading" hidden>
+  <div class="loading__inner">
+    <div class="loading__catch">
+      <img src="images/main/loading.png">
     </div>
+  </div>
 </div>
-</body>
-</html>
+
+<script>
+$(function(){
+
+  const animationTIme = {
+    firstWait: 500,
+    catchAnime: 1000,
+    fadeout: 1000
+  }
+
+  function showCont(){
+    $(".loading").addClass("is-catchAnime");
+    setTimeout(function(){
+      $(".loading").fadeOut(animationTIme["fadeout"],"easeInOutQuint");
+    }, animationTIme["catchAnime"] );
+  }
+
+  setTimeout(function(){
+    showCont();
+  }, animationTIme["firstWait"] );
+
+});
+</script>

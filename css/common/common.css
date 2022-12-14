@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+/* ========================================
+全局
+======================================== */
+
+/* 基礎字體 */
+body {
+  color: #333;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+/* 超鏈接 */
+a {
+  color: #ef7d33;
+  transition: .3s;
+  transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+/* 訪問過的超鏈接 */
+a:visited {
+  color: #e8321f;
+}
+
+/* 懸停效果 */
+a:hover {
+  opacity: .6;
+}
+
+/* 選取時的顏色 */
+::-moz-selection {
+  background-color: #d6f5fe;
+  color: #000;
+}
+
+::selection {
+  background-color: #d6f5fe;
+  color: #000;
+}
+
+/* ========================================
+foundation
+追加重置的CSS
+======================================== */
+
+/* 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (min-width: 2000px){
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (min-width: 3000px){
+  html {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-variant-ligatures: none;
+  word-break: break-all;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 .4em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.87em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.12em;
+}
+
+h5, h6 {
+  font-size: 1em;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+iframe {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+  padding: 0;
+}
+
+td {
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ol {
+  padding-left: 1.2em;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 0 0 1em;
+}
+
+small {
+  font-size: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  outline: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+a:not([href]) {
+  pointer-events: none;
+}
+
+iframe[name='google_conversion_frame']{
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
